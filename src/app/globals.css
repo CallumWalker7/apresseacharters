@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* keep anchored sections clear of the sticky nav */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-bone text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Editorial defaults for display type */
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  /* Visible, on-brand focus states everywhere */
+  :focus-visible {
+    outline: 2px solid theme("colors.sound.DEFAULT");
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: theme("colors.sound.DEFAULT");
+    color: #fff;
+  }
+}
+
+@layer components {
+  /* Small uppercase section label */
+  .eyebrow {
+    @apply font-sans text-xs font-medium uppercase tracking-widelabel text-sound;
+  }
+
+  /* The one shared button style */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+      font-sans text-sm font-medium tracking-wide transition-colors duration-200
+      disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-ink text-bone hover:bg-sound;
+  }
+  .btn-ghost {
+    @apply btn border border-ink/20 text-ink hover:border-ink hover:bg-ink hover:text-bone;
+  }
+
+  /* Section container */
+  .section {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+  }
+
+  /* Form field */
+  .input {
+    @apply w-full rounded-lg border border-ink/15 bg-white px-3.5 py-2.5 text-[15px]
+      text-ink shadow-sm transition-colors placeholder:text-ink/35
+      focus:border-sound focus:outline-none focus:ring-2 focus:ring-sound/30;
+  }
+}
+
+/* Futuristic blueprint scan line sweeping down the hero. */
+@keyframes blueprint-scan {
+  0% { top: 6%; opacity: 0; }
+  12% { opacity: 0.6; }
+  88% { opacity: 0.6; }
+  100% { top: 82%; opacity: 0; }
+}
+.blueprint-scan {
+  animation: blueprint-scan 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Scroll-reveal: hidden until observed, then eased in.
+   Fully bypassed for visitors who prefer reduced motion. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-scroll-cue,
+  .blueprint-scan {
+    animation: none !important;
+  }
+  .blueprint-scan {
+    opacity: 0 !important;
+  }
+}

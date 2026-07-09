@@ -1,0 +1,88 @@
+APRES SEA CHARTERS — LAUNCH CHECKLIST
+=====================================
+Files ready to upload: apres-sea-upload.zip  (or the site/ folder)
+Plain-English upload guide: site/DEPLOY-GODADDY.txt
+
+PHASE 0 — ALREADY DONE (build)
+  [x] One-page website built: boat, photos, video, specs, season,
+      location + map, inquiry form, footer
+  [x] Mobile friendly (tested at phone size, working mobile menu)
+  [x] No pricing anywhere; custom-quote wording throughout
+  [x] Season May 1 - Nov 1 shown and enforced on the date field
+  [x] Guest count capped at 10 on the form
+  [x] Form front-end finished (validation, spam trap, success/error)
+  [x] Security hardening (.htaccess: HTTPS, security headers, caching)
+  [x] SEO basics (title, description, social share image, sitemap,
+      robots.txt, structured data) + custom 404 page
+  [x] Everything packaged in apres-sea-upload.zip
+
+PHASE 1 — GET ACCESS (owner of the GoDaddy account)
+  [ ] 1. Get into the GoDaddy account. Best practice: owner adds you
+         as a delegate (GoDaddy > Account Settings > Delegate Access)
+         instead of sharing the password.
+  [ ] 2. Owner changes the account support PIN (it was shared around
+         in plain text during this project).
+  [ ] 3. Confirm under My Products that BOTH exist:
+         - the domain apresseacharters.com
+         - a Web Hosting plan (buy basic hosting if missing)
+
+PHASE 2 — EMAIL (must come before the form works)
+  [ ] 4. Create info@apresseacharters.com
+         (My Products > Email & Office. If the plan has limited
+         mailboxes, make info@ the real mailbox.)
+  [ ] 5. Create benoit@, alex@, charlie@, captain@
+         (real mailboxes, or free forwarding aliases pointing at
+         existing inboxes - forwarding is cheaper)
+  [ ] 6. Send a test email to info@ from a personal account and
+         confirm it arrives. Decide who monitors info@ and answers
+         quote requests.
+
+PHASE 3 — ACTIVATE THE BOOKING FORM
+  [ ] 7. Go to https://web3forms.com, enter info@apresseacharters.com,
+         click Create Access Key.
+  [ ] 8. Open the info@ inbox, copy the access key from their email.
+  [ ] 9. In index.html, replace YOUR_WEB3FORMS_ACCESS_KEY with the key
+         (one spot, clearly commented). Do this in the local file
+         before uploading, or in GoDaddy File Manager's editor after.
+         Note: this key is public by design - safe to be in the page.
+
+PHASE 4 — PUBLISH
+  [ ] 10. GoDaddy > Web Hosting > Manage > File Manager.
+  [ ] 11. Open public_html, delete any placeholder/"coming soon" files.
+  [ ] 12. Upload apres-sea-upload.zip into public_html and Extract it.
+  [ ] 13. File Manager > Settings > "Show Hidden Files" - confirm
+          .htaccess is present.
+  [ ] 14. If step 9 wasn't done locally: edit index.html in File
+          Manager now and paste the Web3Forms key.
+  [ ] 15. Visit https://apresseacharters.com. If no padlock appears,
+          turn on SSL (Hosting dashboard > Security > SSL) and wait
+          up to an hour. HTTPS redirect is already configured.
+
+PHASE 5 — TEST THE LIVE SITE
+  [ ] 16. Load the site on a phone and a computer; scroll everything.
+  [ ] 17. Submit a real test inquiry through the form. Confirm:
+          - the "Thank you - your inquiry was sent" message appears
+          - the email lands at info@ within a minute
+          - hitting Reply on it goes to the address you entered
+  [ ] 18. Check the guardrails: try a January date and 12 guests -
+          both should be refused with a friendly message.
+  [ ] 19. Check the map, the Sea Ray video, and the Get Directions
+          link on the live site.
+  [ ] 20. Visit apresseacharters.com/anything - the branded
+          "Page not found" page should appear.
+
+PHASE 6 — HANDOFF (customer requests)
+  [ ] 21. Give the owner the promised demo: how to edit wording in
+          index.html and re-upload (it's a 5-minute loop; also
+          written up in site/DEPLOY-GODADDY.txt).
+  [ ] 22. Confirm with the owner:
+          - OK to show "7 River Road" street address on the site?
+          - the three photos are theirs to publish
+  [ ] 23. Send them the live URL and mark the project delivered.
+
+OPTIONAL, AFTER LAUNCH (nice to have, not requested)
+  [ ] Submit the site to Google Search Console and submit sitemap.xml
+  [ ] Create a free Google Business Profile for "Apres Sea Charters"
+      so the business shows on Google Maps
+  [ ] Set up an auto-reply on info@ ("Thanks - we'll reply with a
+      custom quote") for nights/weekends

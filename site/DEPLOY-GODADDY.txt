@@ -1,0 +1,59 @@
+APRES SEA CHARTERS — HOW TO PUT THE SITE LIVE ON GODADDY
+=========================================================
+
+WHAT'S IN THIS FOLDER
+  index.html            the whole website (one page)
+  404.html              the "page not found" page
+  .htaccess             server settings (HTTPS, security, caching)
+  robots.txt            tells search engines they're welcome
+  sitemap.xml           helps Google find the page
+  favicon.ico           the little browser-tab icon
+  favicon.svg           same icon, sharper version
+  apple-touch-icon.png  the icon iPhones use if someone saves the site
+  images/               the boat photos + the picture used when the
+                        link is shared (og.jpg)
+  DEPLOY-GODADDY.txt    this file (you don't need to upload it)
+
+STEP 1 — TURN ON THE INQUIRY FORM (one-time, ~2 minutes)
+  1. Go to https://web3forms.com
+  2. Type in:  info@apresseacharters.com  and click Create Access Key.
+  3. They email you an "access key" (a long code).
+  4. Open index.html in any text editor, search for
+     YOUR_WEB3FORMS_ACCESS_KEY  and paste the code in its place.
+     It appears in exactly one spot.
+  5. Save the file.
+  Note: this key is meant to be public. It can only send mail to
+  info@apresseacharters.com, so it is safe to have in the page.
+
+STEP 2 — UPLOAD THE FILES
+  1. Log in to GoDaddy, go to My Products > Web Hosting > Manage.
+  2. Open cPanel / File Manager.
+  3. Open the folder called  public_html
+  4. Delete any old placeholder files in there (like "coming soon").
+  5. Upload everything from this folder INTO public_html:
+     index.html, 404.html, .htaccess, robots.txt, sitemap.xml,
+     favicon.ico, favicon.svg, apple-touch-icon.png,
+     and the whole images folder.
+     Tip: .htaccess starts with a dot, so it may be hidden. In File
+     Manager, click Settings (top right) and tick "Show Hidden Files"
+     to confirm it uploaded.
+
+STEP 3 — CHECK IT
+  1. Visit https://apresseacharters.com — the site should load with a
+     padlock in the address bar.
+  2. Fill out the inquiry form with your own details and press
+     "Request a charter". You should see the thank-you message, and an
+     email should arrive at info@apresseacharters.com within a minute.
+  3. Try a made-up address like apresseacharters.com/xyz — you should
+     see the branded "not found" page.
+
+NOTES
+  - Your domain (DNS) and your email (MX records) are managed
+    separately in your GoDaddy account. Nothing in these files
+    touches them, and no passwords or account details are stored
+    anywhere in the site.
+  - HTTPS: GoDaddy hosting plans include an SSL certificate. If the
+    padlock doesn't appear, turn SSL on from the hosting dashboard
+    (Security > SSL) — the site is already set up to use it.
+  - To change wording later: everything is in index.html. Open it,
+    find the sentence, edit it, save, re-upload. Nothing to rebuild.

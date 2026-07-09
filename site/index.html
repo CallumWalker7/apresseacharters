@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Après Sea Charters — Private Boat Charters on Long Island Sound, Cos Cob CT</title>
+<meta name="description" content="Private captained charters aboard Après Sea, a 31-foot Sea Ray SLX 310 out of Palmer Point Marina, Cos Cob, Connecticut. Up to ten guests, May 1 through November 1. Every charter is quoted individually." />
+<link rel="canonical" href="https://apresseacharters.com/" />
+
+<!-- Icons -->
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Après Sea Charters" />
+<meta property="og:title" content="Après Sea Charters — Private Charters on Long Island Sound" />
+<meta property="og:description" content="A captained 31-foot Sea Ray for up to ten guests, out of Cos Cob, Connecticut. May through November. Every charter is quoted individually." />
+<meta property="og:url" content="https://apresseacharters.com/" />
+<meta property="og:image" content="https://apresseacharters.com/images/og.jpg" />
+<meta property="og:image:width" content="1100" />
+<meta property="og:image:height" content="576" />
+<meta property="og:image:alt" content="Après Sea, a white 31-foot Sea Ray SLX 310, underway on the water." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Après Sea Charters — Private Charters on Long Island Sound" />
+<meta name="twitter:description" content="A captained 31-foot Sea Ray for up to ten guests, out of Cos Cob, Connecticut. May through November." />
+<meta name="twitter:image" content="https://apresseacharters.com/images/og.jpg" />
+
+<meta name="theme-color" content="#0B1B3B" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://apresseacharters.com/#business",
+  "name": "Après Sea Charters",
+  "description": "Private captained boat charters on Long Island Sound aboard Après Sea, a 31-foot Sea Ray SLX 310. Up to ten guests, in season May 1 through November 1. Every charter is quoted individually.",
+  "url": "https://apresseacharters.com/",
+  "email": "info@apresseacharters.com",
+  "image": "https://apresseacharters.com/images/og.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Palmer Point Marina, 7 River Road",
+    "addressLocality": "Cos Cob",
+    "addressRegion": "CT",
+    "postalCode": "06807",
+    "addressCountry": "US"
+  },
+  "areaServed": "Long Island Sound",
+  "sameAs": []
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --ink: #0B1B3B;
+    --ink-soft: #1B2C4E;
+    --sound: #2E5A7A;
+    --sand: #F3EEE6;
+    --bone: #FAF7F1;
+    --brass: #A9865B;
+    --brass-lt: #C6A97C;      /* brass tint for text on navy — passes AA */
+    --blueprint: #8CC5E0;
+    --measure: 62ch;
+    --serif: "Fraunces", Georgia, serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --pad-section: clamp(4.5rem, 10vw, 8rem);
+    --ease: cubic-bezier(.22, 1, .36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    font-family: var(--sans); color: var(--ink); background: var(--bone);
+    -webkit-font-smoothing: antialiased; line-height: 1.5;
+  }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 300; line-height: 1.08; text-wrap: balance; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; height: auto; }
+  ::selection { background: var(--sound); color: var(--bone); }
+
+  :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 2px; }
+  .hero :focus-visible, .boat :focus-visible, .inquire :focus-visible { outline-color: var(--blueprint); }
+
+  .skip {
+    position: absolute; left: 1rem; top: -3.5rem; z-index: 100;
+    background: var(--ink); color: var(--bone); padding: .7rem 1.2rem;
+    border-radius: 0 0 .5rem .5rem; font-size: .9rem; transition: top .2s;
+  }
+  .skip:focus-visible { top: 0; }
+
+  .section { width: 100%; max-width: 74rem; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2rem); }
+  .eyebrow {
+    display: flex; align-items: center; gap: .8rem;
+    font-size: .72rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .22em; color: var(--sound);
+  }
+  .eyebrow::before { content: ""; width: 2rem; height: 1px; background: currentColor; opacity: .5; }
+  .on-dark .eyebrow, .eyebrow.on-dark { color: var(--brass-lt); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    border-radius: 999px; padding: .85rem 1.7rem; font-size: .9rem; font-weight: 500;
+    transition: background .2s, color .2s, border-color .2s, transform .2s; cursor: pointer;
+    border: 0; font-family: var(--sans); line-height: 1.2;
+  }
+  .btn:active { transform: scale(.98); }
+  .btn-light { background: var(--bone); color: var(--ink); }
+  .btn-light:hover { background: var(--brass-lt); color: var(--ink); }
+  .btn-dark { background: var(--ink); color: var(--bone); }
+  .btn-dark:hover { background: var(--sound); }
+  .btn-ghost { border: 1px solid rgba(11,27,59,.25); color: var(--ink); background: transparent; }
+  .btn-ghost:hover { border-color: var(--ink); background: var(--ink); color: var(--bone); }
+  .btn-ghost-light { border: 1px solid rgba(250,247,241,.35); color: var(--bone); background: transparent; }
+  .btn-ghost-light:hover { border-color: var(--bone); background: rgba(250,247,241,.1); }
+
+  /* ============ NAV ============ */
+  header {
+    position: fixed; inset: 0 0 auto 0; z-index: 40;
+    transition: background .35s var(--ease), box-shadow .35s var(--ease);
+  }
+  header.scrolled { background: rgba(11,27,59,.92); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(250,247,241,.08); }
+  nav.bar { display: flex; align-items: center; justify-content: space-between; height: 4.25rem; }
+  .wordmark { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--bone); letter-spacing: .01em; }
+  .navlinks { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .navlinks a { font-size: .88rem; color: rgba(250,247,241,.85); padding: .35rem 0; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+  .navlinks a:hover { color: var(--bone); border-color: var(--brass-lt); }
+  .nav-cta { padding: .6rem 1.3rem; font-size: .85rem; }
+
+  .menu-btn {
+    display: none; background: none; border: 0; cursor: pointer;
+    width: 2.75rem; height: 2.75rem; margin-right: -.6rem;
+    flex-direction: column; align-items: center; justify-content: center; gap: 7px;
+  }
+  .menu-btn span { display: block; width: 24px; height: 1.5px; background: var(--bone); transition: transform .3s var(--ease), opacity .2s; }
+  body.menu-open .menu-btn span:first-child { transform: translateY(4.25px) rotate(45deg); }
+  body.menu-open .menu-btn span:last-child { transform: translateY(-4.25px) rotate(-45deg); }
+  @media (max-width: 800px) {
+    .navlinks, .nav-cta { display: none; }
+    .menu-btn { display: flex; }
+  }
+
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 39; background: var(--ink); color: var(--bone);
+    display: flex; flex-direction: column; justify-content: center; padding: 0 clamp(1.5rem, 8vw, 3rem);
+    opacity: 0; visibility: hidden; transition: opacity .35s var(--ease), visibility .35s;
+  }
+  body.menu-open .mobile-menu { opacity: 1; visibility: visible; }
+  body.menu-open { overflow: hidden; }
+  .mobile-menu ul { list-style: none; }
+  .mobile-menu li + li { margin-top: .25rem; }
+  .mobile-menu a.mlink {
+    font-family: var(--serif); font-size: clamp(2rem, 9vw, 2.75rem); font-weight: 300;
+    color: var(--bone); display: inline-block; padding: .35rem 0;
+  }
+  .mobile-menu a.mlink:hover { color: var(--brass-lt); }
+  .mobile-menu .m-cta { margin-top: 2.5rem; }
+  .mobile-menu .m-meta { margin-top: 3.5rem; font-size: .82rem; color: rgba(250,247,241,.65); line-height: 1.8; }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative; min-height: 100svh; display: flex; align-items: center;
+    overflow: hidden; background: var(--ink); color: var(--bone);
+  }
+  .hero > svg.bp { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hero .wash-r { position: absolute; inset: 0; background: linear-gradient(to right, var(--ink) 8%, rgba(11,27,59,.55) 48%, transparent 80%); }
+  .hero .wash-b { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11,27,59,.55), transparent 30%, transparent 65%, var(--ink)); }
+  .hero .content { position: relative; z-index: 2; padding: 7.5rem 0 8.5rem; width: 100%; }
+  .hero .content > div { max-width: 44rem; }
+  .hero-brand { font-family: var(--serif); font-style: italic; font-size: clamp(1.6rem, 3.5vw, 2.1rem); color: var(--brass-lt); }
+  .hero h1 { font-size: clamp(2.5rem, 6.5vw, 4.25rem); color: var(--bone); margin-top: 1.1rem; letter-spacing: -.01em; }
+  .hero .sub { margin-top: 1.5rem; max-width: 32rem; color: rgba(250,247,241,.82); font-size: clamp(1rem, 1.6vw, 1.1rem); line-height: 1.65; }
+  .hero .cta-row { margin-top: 2.75rem; display: flex; flex-wrap: wrap; align-items: center; gap: .9rem; }
+  .hero-meta {
+    position: absolute; z-index: 2; bottom: 1.75rem; left: 0; right: 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  }
+  .hero-meta p { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(250,247,241,.65); }
+  .hero-meta .dot { color: var(--brass-lt); padding: 0 .35em; }
+  @media (max-width: 640px) { .hero-meta p.right { display: none; } }
+
+  @media (max-width: 800px) {
+    .hero > svg.bp { opacity: .45; }
+    .hero .dim { display: none; }
+  }
+  @keyframes scan { 0% { top: 8%; opacity: 0; } 12% { opacity: .5; } 88% { opacity: .5; } 100% { top: 80%; opacity: 0; } }
+  .scan {
+    position: absolute; left: 0; right: 0; height: 1px; z-index: 1;
+    background: linear-gradient(to right, transparent, rgba(140,197,224,.55), transparent);
+    animation: scan 9s var(--ease) infinite;
+  }
+
+  /* ============ SHARED SECTION RHYTHM ============ */
+  .band { padding: var(--pad-section) 0; }
+  .band h2 { font-size: clamp(1.9rem, 4vw, 2.75rem); margin-top: 1.1rem; letter-spacing: -.01em; }
+  .lede { margin-top: 1.35rem; max-width: var(--measure); font-size: clamp(1.02rem, 1.5vw, 1.12rem); line-height: 1.7; }
+  .grid12 { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(1.5rem, 4vw, 3rem); }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: .08s; } .reveal.d2 { transition-delay: .16s; } .reveal.d3 { transition-delay: .24s; }
+
+  /* ============ EXPERIENCE ============ */
+  .experience { background: var(--bone); }
+  .experience .col-head { grid-column: span 5; }
+  .experience .col-body { grid-column: 7 / span 6; align-self: end; }
+  .experience p { max-width: var(--measure); font-size: 1.1rem; line-height: 1.75; color: rgba(11,27,59,.82); }
+  .experience p + p { margin-top: 1.4rem; }
+  .experience .aside {
+    margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(11,27,59,.12);
+    font-size: .9rem; color: rgba(11,27,59,.65); max-width: 26rem; line-height: 1.7;
+  }
+  @media (max-width: 800px) {
+    .experience .col-head, .experience .col-body { grid-column: 1 / -1; }
+  }
+
+  /* ============ BOAT ============ */
+  .boat { background: var(--ink); color: var(--bone); }
+  .boat .lede { color: rgba(250,247,241,.8); }
+  .gallery { margin-top: clamp(2.5rem, 5vw, 3.5rem); display: grid; grid-template-columns: 3fr 2fr; gap: 1.1rem; }
+  .gallery figure { position: relative; border-radius: .6rem; overflow: hidden; background: var(--ink-soft); }
+  .gallery .lead { grid-row: span 2; }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+  .gallery figure:hover img { transform: scale(1.03); }
+  .gallery figcaption {
+    position: absolute; inset: auto 0 0 0; padding: 2.25rem 1.1rem .9rem; font-size: .82rem;
+    color: rgba(250,247,241,.92); background: linear-gradient(to top, rgba(11,27,59,.75), transparent);
+  }
+  @media (max-width: 800px) {
+    .gallery { grid-template-columns: 1fr; }
+    .gallery .lead { grid-row: auto; }
+  }
+  .boat-lower { margin-top: clamp(2.5rem, 5vw, 4rem); display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(1.5rem, 4vw, 3rem); }
+  .specs { grid-column: span 5; border-top: 1px solid rgba(250,247,241,.18); }
+  .specs .row { display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding: .9rem 0; border-bottom: 1px solid rgba(250,247,241,.14); }
+  .specs dt { font-size: .75rem; text-transform: uppercase; letter-spacing: .18em; color: rgba(250,247,241,.62); }
+  .specs dd { font-family: var(--serif); font-size: 1.12rem; text-align: right; }
+  .specs .cite { margin-top: 1.25rem; font-size: .78rem; color: rgba(250,247,241,.6); }
+  .specs .cite a { text-decoration: underline; text-underline-offset: 3px; }
+  .specs .cite a:hover { color: var(--blueprint); }
+  .video { grid-column: 7 / span 6; align-self: start; }
+  .video .frame { position: relative; aspect-ratio: 16 / 9; border-radius: .6rem; overflow: hidden; border: 1px solid rgba(250,247,241,.15); background: var(--ink-soft); }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .video p { margin-top: .8rem; font-size: .85rem; color: rgba(250,247,241,.62); }
+  @media (max-width: 800px) { .specs, .video { grid-column: 1 / -1; } }
+
+  /* ============ HOW IT WORKS ============ */
+  .how { background: var(--sand); }
+  .how .lede { color: rgba(11,27,59,.78); }
+  .points {
+    margin-top: clamp(2.5rem, 5vw, 3.5rem); display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: rgba(11,27,59,.12); border: 1px solid rgba(11,27,59,.12);
+    border-radius: .6rem; overflow: hidden;
+  }
+  .points .pt { background: var(--bone); padding: clamp(1.5rem, 3vw, 2.25rem); }
+  .points .num { font-family: var(--serif); font-size: 1.6rem; color: var(--brass); }
+  .points h3 { font-size: 1.3rem; margin-top: 1.1rem; }
+  .points p { margin-top: .6rem; font-size: .95rem; line-height: 1.65; color: rgba(11,27,59,.72); }
+  .how .season-note { margin-top: 1.75rem; font-size: .88rem; color: rgba(11,27,59,.62); }
+  @media (max-width: 800px) { .points { grid-template-columns: 1fr; } }
+
+  /* ============ LOCATION ============ */
+  .location { background: var(--bone); }
+  .location .grid { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .location p.body { margin-top: 1.35rem; max-width: var(--measure); color: rgba(11,27,59,.78); font-size: 1.08rem; line-height: 1.7; }
+  .location address { margin-top: 2rem; font-style: normal; }
+  .location address .m { display: block; font-family: var(--serif); font-size: 1.3rem; }
+  .location address .a { display: block; margin-top: .3rem; color: rgba(11,27,59,.7); font-size: .95rem; }
+  .location .map { border-radius: .6rem; overflow: hidden; border: 1px solid rgba(11,27,59,.12); box-shadow: 0 24px 60px -30px rgba(11,27,59,.4); }
+  .location .map iframe { display: block; width: 100%; height: 400px; border: 0; filter: grayscale(.2); }
+  @media (max-width: 800px) {
+    .location .grid { grid-template-columns: 1fr; }
+    .location .map iframe { height: 320px; }
+  }
+
+  /* ============ INQUIRE ============ */
+  .inquire { background: var(--ink); color: var(--bone); }
+  .inquire .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(1.75rem, 4vw, 3rem); }
+  .inquire .intro { grid-column: span 4; }
+  .inquire .intro p.pitch { margin-top: 1.35rem; color: rgba(250,247,241,.8); font-size: 1.08rem; line-height: 1.7; }
+  .inquire .intro .note { margin-top: 1.75rem; font-size: .85rem; color: rgba(250,247,241,.65); line-height: 1.7; }
+  .inquire .intro .note a { text-decoration: underline; text-underline-offset: 3px; }
+  .inquire .intro .note a:hover { color: var(--blueprint); }
+  .inquire .card {
+    grid-column: 6 / span 7; background: var(--bone); color: var(--ink);
+    border-radius: .8rem; padding: clamp(1.5rem, 3vw, 2.25rem);
+    box-shadow: 0 24px 60px -30px rgba(0,0,0,.5);
+  }
+  @media (max-width: 800px) { .inquire .intro, .inquire .card { grid-column: 1 / -1; } }
+
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { display: block; font-size: .85rem; font-weight: 500; }
+  .field label .opt { font-weight: 400; color: rgba(11,27,59,.55); }
+  .field .hint { display: block; margin-top: .2rem; font-size: .78rem; color: rgba(11,27,59,.6); }
+  .field .input {
+    width: 100%; margin-top: .45rem; border: 1px solid rgba(11,27,59,.2); border-radius: .5rem;
+    padding: .7rem .85rem; font: inherit; font-size: .95rem; background: #fff; color: var(--ink);
+  }
+  .field .input:focus { outline: none; border-color: var(--sound); box-shadow: 0 0 0 3px rgba(46,90,122,.25); }
+  .field .input[aria-invalid="true"] { border-color: #A33B2E; }
+  .ferr { margin-top: .4rem; font-size: .8rem; color: #8A2F24; }
+  @media (max-width: 560px) { .fields { grid-template-columns: 1fr; } }
+
+  /* Honeypot — hidden from people, present for bots */
+  .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+
+  .form-foot { margin-top: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+  .form-foot .quiet { font-size: .8rem; color: rgba(11,27,59,.6); }
+  .btn[disabled] { opacity: .6; cursor: wait; }
+
+  .form-status { margin-top: 1.25rem; border-radius: .5rem; padding: 1rem 1.15rem; font-size: .92rem; line-height: 1.6; }
+  .form-status.err { background: #F6E7E4; color: #6E241B; border: 1px solid #E3C4BE; }
+  .form-status.err a { text-decoration: underline; font-weight: 500; }
+  .success-card { text-align: left; padding: 1rem 0; }
+  .success-card h3 { font-size: 1.6rem; }
+  .success-card p { margin-top: .9rem; color: rgba(11,27,59,.78); line-height: 1.7; max-width: 34rem; }
+  [hidden] { display: none !important; }
+
+  /* ============ FOOTER ============ */
+  footer { background: var(--bone); border-top: 1px solid rgba(11,27,59,.1); padding: 3.5rem 0 0; }
+  .foot { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; }
+  .foot .mark { font-family: var(--serif); font-style: italic; font-size: 1.5rem; }
+  .foot .tag { margin-top: .6rem; max-width: 20rem; font-size: .9rem; color: rgba(11,27,59,.65); line-height: 1.6; }
+  .foot h2.label { font-size: .72rem; text-transform: uppercase; letter-spacing: .22em; color: rgba(11,27,59,.55); font-family: var(--sans); font-weight: 600; line-height: 1.5; }
+  .foot .col p, .foot .col a { display: block; margin-top: .55rem; font-size: .9rem; color: rgba(11,27,59,.82); }
+  .foot .col a:hover { color: var(--sound); text-decoration: underline; text-underline-offset: 3px; }
+  .foot-bottom {
+    max-width: 74rem; margin: 2.75rem auto 0; padding: 1.4rem clamp(1.25rem, 4vw, 2rem);
+    border-top: 1px solid rgba(11,27,59,.1);
+    display: flex; justify-content: space-between; gap: .5rem; font-size: .78rem; color: rgba(11,27,59,.55);
+  }
+  @media (max-width: 640px) { .foot { grid-template-columns: 1fr; gap: 2rem; } .foot-bottom { flex-direction: column; } }
+
+  /* ============ MOTION PREFERENCES ============ */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .scan { display: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .gallery img, .btn, header { transition: none; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header id="site-header">
+  <nav class="bar section" aria-label="Main">
+    <a href="#top" class="wordmark">Après Sea</a>
+    <ul class="navlinks">
+      <li><a href="#experience">The Day</a></li>
+      <li><a href="#boat">The Boat</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#location">Departure</a></li>
+    </ul>
+    <a href="#inquire" class="btn btn-light nav-cta">Request a charter</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a class="mlink" href="#experience">The Day</a></li>
+      <li><a class="mlink" href="#boat">The Boat</a></li>
+      <li><a class="mlink" href="#how">How It Works</a></li>
+      <li><a class="mlink" href="#location">Departure</a></li>
+    </ul>
+    <a href="#inquire" class="btn btn-light m-cta">Request a charter</a>
+    <div class="m-meta">
+      <p>Palmer Point Marina · Cos Cob, CT</p>
+      <p>In season May 1 – November 1</p>
+      <p><a href="mailto:info@apresseacharters.com" style="text-decoration:underline">info@apresseacharters.com</a></p>
+    </div>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- HERO — blueprint side elevation of the boat -->
+<section id="top" class="hero">
+  <svg class="bp" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="bpGlow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="2.4" result="b" /><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <pattern id="bpGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M60 0H0V60" fill="none" stroke="#8CC5E0" stroke-width="1" stroke-opacity=".09"/>
+      </pattern>
+    </defs>
+    <rect width="1440" height="900" fill="url(#bpGrid)"/>
+    <g stroke="#8CC5E0" stroke-width="1" stroke-opacity="0.18"><line x1="0" y1="600" x2="1440" y2="600"/><line x1="720" y1="0" x2="720" y2="900"/></g>
+    <g stroke="#8CC5E0" stroke-width="1" stroke-opacity="0.4">
+      <line x1="171" y1="180" x2="189" y2="180"/><line x1="180" y1="171" x2="180" y2="189"/>
+      <line x1="1251" y1="240" x2="1269" y2="240"/><line x1="1260" y1="231" x2="1260" y2="249"/>
+      <line x1="1191" y1="690" x2="1209" y2="690"/><line x1="1200" y1="681" x2="1200" y2="699"/>
+      <line x1="231" y1="660" x2="249" y2="660"/><line x1="240" y1="651" x2="240" y2="669"/>
+    </g>
+    <g filter="url(#bpGlow)" fill="none" stroke="#8CC5E0" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.85">
+      <path d="M330 472 C 520 486 780 486 980 470 C 1060 462 1120 458 1150 452 C 1170 472 1160 502 1120 528 C 1050 556 780 566 520 556 C 430 550 360 546 338 545 L 330 472 Z"/>
+      <path stroke="#BFE2F1" d="M342 486 C 540 500 800 500 1000 484 C 1078 477 1128 474 1150 470"/>
+      <path stroke-opacity="0.55" d="M350 521 C 600 529 900 521 1120 512"/>
+      <path stroke-opacity="0.5" d="M334 500 L 350 500"/>
+      <path d="M802 470 C 800 400 826 383 848 384"/>
+      <path stroke="#BFE2F1" d="M848 384 L 905 392"/>
+      <path d="M905 392 L 936 470"/><path d="M905 392 L 872 470"/>
+      <path stroke-opacity="0.5" d="M1005 470 L 1120 452"/>
+    </g>
+    <line x1="150" y1="524" x2="1290" y2="524" stroke="#8CC5E0" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="2 9"/>
+    <g class="dim" stroke="#8CC5E0" stroke-opacity="0.5" stroke-width="1">
+      <line x1="330" y1="628" x2="1150" y2="628"/><line x1="330" y1="618" x2="330" y2="638"/><line x1="1150" y1="618" x2="1150" y2="638"/>
+      <path d="M338 623 L 330 628 L 338 633" fill="none"/><path d="M1142 623 L 1150 628 L 1142 633" fill="none"/>
+    </g>
+    <g class="dim" fill="#C6A97C" font-family="ui-monospace, Menlo, monospace">
+      <rect x="690" y="614" width="100" height="16" fill="#0B1B3B"/>
+      <text x="740" y="626" text-anchor="middle" font-size="12" letter-spacing="1.5">31′6″ LOA</text>
+    </g>
+    <g fill="#8CC5E0" fill-opacity="0.6" font-family="ui-monospace, Menlo, monospace">
+      <text x="330" y="356" font-size="12" letter-spacing="2.5">SEA RAY · SLX 310</text>
+      <text x="330" y="374" font-size="10.5" letter-spacing="2" fill-opacity="0.45">SIDE ELEVATION · APRÈS SEA</text>
+    </g>
+  </svg>
+  <div class="scan" aria-hidden="true"></div>
+  <div class="wash-r" aria-hidden="true"></div>
+  <div class="wash-b" aria-hidden="true"></div>
+  <div class="section content">
+    <div>
+      <p class="eyebrow on-dark">Cos Cob, Connecticut</p>
+      <p class="hero-brand">Après Sea</p>
+      <h1>Private boat charters on Long Island Sound.</h1>
+      <p class="sub">A captained 31-foot Sea Ray out of Cos Cob, Connecticut. Up to ten guests, May through November. Every charter is planned and priced on its own.</p>
+      <div class="cta-row">
+        <a href="#inquire" class="btn btn-light">Request a charter</a>
+        <a href="#boat" class="btn btn-ghost-light">See the boat</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-meta section" aria-hidden="true">
+    <p>Palmer Point Marina<span class="dot">·</span>Cos Cob, CT</p>
+    <p class="right">In season May 1 – Nov 1</p>
+  </div>
+</section>
+
+<!-- THE DAY -->
+<section id="experience" class="experience band">
+  <div class="section grid12">
+    <div class="col-head reveal">
+      <p class="eyebrow">The Day</p>
+      <h2>Every charter is private and planned around you.</h2>
+    </div>
+    <div class="col-body reveal d1">
+      <p>We don't sell set packages, and you never share the boat with another group. Tell us the occasion — a sunset cruise, a harbor tour, an afternoon at anchor — and we plan the trip around it.</p>
+      <p>An experienced captain handles the boat, the navigation, and the weather calls. All you do is show up at the dock.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE BOAT -->
+<section id="boat" class="boat band on-dark">
+  <div class="section">
+    <div style="max-width:44rem" class="reveal">
+      <p class="eyebrow">The Boat</p>
+      <h2>Après Sea. A 31&#8209;foot Sea&nbsp;Ray SLX&nbsp;310.</h2>
+      <p class="lede">Open bow, shaded cockpit, and seating for ten guests — comfortable underway and at anchor.</p>
+    </div>
+    <div class="gallery">
+      <figure class="lead reveal">
+        <img src="images/helm.jpg" width="1100" height="732" alt="The cockpit of Après Sea: twin white captain's seats under a hardtop with a skylight, wraparound seating aft." loading="lazy" decoding="async" />
+        <figcaption>The cockpit, shaded under the hardtop.</figcaption>
+      </figure>
+      <figure class="reveal d1">
+        <img src="images/bow.jpg" width="1100" height="721" alt="The bow lounge of Après Sea: wraparound white sun-pad seating with a table set up, looking out over calm water." loading="lazy" decoding="async" />
+        <figcaption>The bow lounge, table up.</figcaption>
+      </figure>
+      <figure class="reveal d2">
+        <img src="images/profile.jpg" width="1100" height="740" alt="Starboard profile of Après Sea, a white Sea Ray SLX 310 with a sport arch, underway on the Mianus River." loading="lazy" decoding="async" />
+        <figcaption>Underway, headed for open water.</figcaption>
+      </figure>
+    </div>
+    <div class="boat-lower">
+      <dl class="specs reveal">
+        <div class="row"><dt>Length overall</dt><dd>31 ft 6 in</dd></div>
+        <div class="row"><dt>Beam</dt><dd>10 ft 2 in</dd></div>
+        <div class="row"><dt>Guests aboard</dt><dd>Up to 10</dd></div>
+        <div class="row"><dt>Fuel capacity</dt><dd>158 gal</dd></div>
+        <div class="row"><dt>Power</dt><dd>Twin sterndrive, up to 700 hp</dd></div>
+        <div class="row"><dt>Model</dt><dd>Sea Ray SLX 310</dd></div>
+        <p class="cite">Specifications per <a href="https://www.searay.com/us/en/boats/slx/slx-310" target="_blank" rel="noopener noreferrer">Sea Ray</a>.</p>
+      </dl>
+      <div class="video reveal d1">
+        <div class="frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/rbx8CWmjKy8" title="Sea Ray SLX 310 walkthrough video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p>The manufacturer's walkthrough of the SLX 310.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="how band">
+  <div class="section">
+    <div style="max-width:44rem" class="reveal">
+      <p class="eyebrow">How It Works</p>
+      <h2>Every charter is quoted individually.</h2>
+      <p class="lede">There's no published rate card. The date, the hours, the size of your group, and what you have in mind all shape the price, so we prepare a quote for each trip.</p>
+    </div>
+    <div class="points">
+      <div class="pt reveal">
+        <span class="num" aria-hidden="true">01</span>
+        <h3>Write to us</h3>
+        <p>Send the form below, or email us directly. A date, a headcount, and a rough idea of the day is plenty to start.</p>
+      </div>
+      <div class="pt reveal d1">
+        <span class="num" aria-hidden="true">02</span>
+        <h3>Get your quote</h3>
+        <p>We reply by email with a plan for the trip and a firm price for it. Ask questions, adjust, confirm.</p>
+      </div>
+      <div class="pt reveal d2">
+        <span class="num" aria-hidden="true">03</span>
+        <h3>Step aboard</h3>
+        <p>Meet us at Palmer Point Marina in Cos Cob. Your captain will be ready at the dock.</p>
+      </div>
+    </div>
+    <p class="season-note reveal">We charter May 1 through November 1, weather permitting.</p>
+  </div>
+</section>
+
+<!-- DEPARTURE -->
+<section id="location" class="location band">
+  <div class="section grid">
+    <div class="reveal">
+      <p class="eyebrow">Departure</p>
+      <h2>We cast off from Palmer Point Marina.</h2>
+      <p class="body">Cos Cob, Connecticut, on the Mianus River — a few minutes' idle from open water on the Sound. Every charter boards and returns at the same dock.</p>
+      <address>
+        <span class="m">Palmer Point Marina</span>
+        <span class="a">7 River Road, Cos Cob, Connecticut 06807</span>
+      </address>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Palmer%20Point%20Marina%2C%207%20River%20Road%2C%20Cos%20Cob%2C%20CT%2006807" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="margin-top:1.75rem">Get directions</a>
+    </div>
+    <div class="map reveal d1">
+      <iframe title="Map showing Palmer Point Marina in Cos Cob, Connecticut" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5990!2d-73.59523!3d41.03432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPalmer%20Point%20Marina!5e0!3m2!1sen!2sus!4v1720000000000"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRE -->
+<section id="inquire" class="inquire band on-dark">
+  <div class="section grid">
+    <div class="intro reveal">
+      <p class="eyebrow">Inquire</p>
+      <h2>Tell us about your day.</h2>
+      <p class="pitch">A date, a headcount, and whatever you have in mind. We read every note and answer by email with a custom quote.</p>
+      <p class="note">In season May 1 – November 1. Up to ten guests aboard.<br />Prefer email? Write to <a href="mailto:info@apresseacharters.com">info@apresseacharters.com</a>.</p>
+    </div>
+
+    <!--
+      Form delivery: Web3Forms (https://web3forms.com — free, no server needed).
+      1. Go to web3forms.com, enter info@apresseacharters.com, and copy the access key it emails you.
+      2. Paste that key in place of YOUR_WEB3FORMS_ACCESS_KEY below (one place only).
+      Note: a Web3Forms access key is PUBLIC by design — it can only send mail to the
+      address it was created for, so it is safe to have in this file. Not a secret.
+    -->
+    <form class="card reveal d1" id="charter-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+      <input type="hidden" name="subject" value="Charter inquiry — apresseacharters.com" />
+      <input type="hidden" name="from_name" value="Après Sea Charters website" />
+      <!-- Honeypot: hidden from people; bots that fill it are discarded by Web3Forms -->
+      <div class="hp" aria-hidden="true">
+        <label for="botcheck">Leave this box unchecked</label>
+        <input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <div id="form-fields">
+        <div class="fields">
+          <div class="field">
+            <label for="f-name">Full name</label>
+            <input class="input" id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name" />
+            <p class="ferr" id="err-name" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input class="input" id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="err-email" />
+            <p class="ferr" id="err-email" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+            <input class="input" id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="err-phone" />
+            <p class="ferr" id="err-phone" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-guests">Guests</label>
+            <span class="hint" id="hint-guests">1 to 10 — the boat's limit</span>
+            <input class="input" id="f-guests" name="guests" type="number" inputmode="numeric" min="1" max="10" step="1" value="2" required aria-describedby="hint-guests err-guests" />
+            <p class="ferr" id="err-guests" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-date">Desired date</label>
+            <span class="hint" id="hint-date">In season: May 1 – November 1</span>
+            <input class="input" id="f-date" name="date" type="date" required aria-describedby="hint-date err-date" />
+            <p class="ferr" id="err-date" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-time">Departure time <span class="opt">(optional)</span></label>
+            <input class="input" id="f-time" name="departure_time" type="time" />
+          </div>
+          <div class="field full">
+            <label for="f-duration">Duration</label>
+            <select class="input" id="f-duration" name="duration">
+              <option>Not sure yet</option>
+              <option>2 hours</option>
+              <option>3 hours</option>
+              <option>4 hours</option>
+              <option>Half day</option>
+              <option>Full day</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="f-notes">Notes <span class="opt">(optional)</span></label>
+            <textarea class="input" id="f-notes" name="notes" rows="4" placeholder="The occasion, itinerary ideas, accessibility needs — anything useful."></textarea>
+          </div>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-dark" id="submit-btn">Request a charter</button>
+          <p class="quiet">No payment now. We reply with a custom quote.</p>
+        </div>
+        <div class="form-status err" id="form-error" role="alert" hidden>
+          <p>Your note didn't go through. Please email us directly at <a href="mailto:info@apresseacharters.com">info@apresseacharters.com</a> — we answer those too.</p>
+        </div>
+      </div>
+
+      <div class="success-card" id="form-success" role="status" tabindex="-1" hidden>
+        <h3>Thank you — your inquiry was sent.</h3>
+        <p>Your inquiry is in. We'll follow up by email with a custom quote for your day on the water.</p>
+        <p style="font-size:.85rem">Nothing in your inbox after a couple of days? Check spam, or write us at <a href="mailto:info@apresseacharters.com" style="text-decoration:underline">info@apresseacharters.com</a>.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="section foot">
+    <div>
+      <p class="mark">Après Sea</p>
+      <p class="tag">Private captained charters on Long Island Sound. Up to ten guests. Every charter individually quoted.</p>
+    </div>
+    <div class="col">
+      <h2 class="label">Inquiries</h2>
+      <a href="mailto:info@apresseacharters.com">info@apresseacharters.com</a>
+      <a href="#inquire">Request a charter</a>
+    </div>
+    <div class="col">
+      <h2 class="label">Departure</h2>
+      <p>Palmer Point Marina</p>
+      <p>7 River Road, Cos Cob, CT</p>
+      <p>In season May 1 – November 1</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p>© <span id="year">2026</span> Après Sea Charters. All rights reserved.</p>
+    <p>Cos Cob, CT · Long Island Sound</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Header state ---------- */
+  var header = document.getElementById("site-header");
+  function onScroll() { header.classList.toggle("scrolled", window.scrollY > 24); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- Mobile menu ---------- */
+  var menuBtn = document.querySelector(".menu-btn");
+  var menu = document.getElementById("mobile-menu");
+  function setMenu(open) {
+    document.body.classList.toggle("menu-open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+  menuBtn.addEventListener("click", function () {
+    setMenu(!document.body.classList.contains("menu-open"));
+  });
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { setMenu(false); });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && document.body.classList.contains("menu-open")) {
+      setMenu(false);
+      menuBtn.focus();
+    }
+  });
+
+  /* ---------- Reveal on scroll ---------- */
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reveals = document.querySelectorAll(".reveal");
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add("in"); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -5% 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- Footer year ---------- */
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+
+  /* ---------- Inquiry form ---------- */
+  var form = document.getElementById("charter-form");
+  var submitBtn = document.getElementById("submit-btn");
+  var fieldsWrap = document.getElementById("form-fields");
+  var successCard = document.getElementById("form-success");
+  var errorBox = document.getElementById("form-error");
+
+  // Earliest selectable date is today
+  var today = new Date();
+  var iso = today.getFullYear() + "-" + String(today.getMonth() + 1).padStart(2, "0") + "-" + String(today.getDate()).padStart(2, "0");
+  document.getElementById("f-date").setAttribute("min", iso);
+
+  function setError(id, msg) {
+    var input = document.getElementById("f-" + id);
+    var err = document.getElementById("err-" + id);
+    if (msg) {
+      err.textContent = msg;
+      err.hidden = false;
+      input.setAttribute("aria-invalid", "true");
+    } else {
+      err.hidden = true;
+      err.textContent = "";
+      input.removeAttribute("aria-invalid");
+    }
+  }
+
+  function inSeason(dateStr) {
+    // Season: May 1 – November 1, inclusive, any year
+    var parts = dateStr.split("-");
+    var m = parseInt(parts[1], 10), d = parseInt(parts[2], 10);
+    if (m >= 5 && m <= 10) return true;
+    if (m === 11 && d === 1) return true;
+    return false;
+  }
+
+  function validate() {
+    var ok = true;
+    var name = document.getElementById("f-name").value.trim();
+    var email = document.getElementById("f-email").value.trim();
+    var phone = document.getElementById("f-phone").value.trim();
+    var guests = document.getElementById("f-guests").value.trim();
+    var date = document.getElementById("f-date").value;
+
+    if (name.length < 2) { setError("name", "Please tell us your name."); ok = false; } else setError("name", "");
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError("email", "That email doesn't look right — please check it."); ok = false; } else setError("email", "");
+
+    if (phone && phone.replace(/\D/g, "").length < 7) { setError("phone", "That phone number looks short — please check it."); ok = false; } else setError("phone", "");
+
+    var g = parseInt(guests, 10);
+    if (!guests || isNaN(g) || g < 1 || g > 10 || String(g) !== guests) {
+      setError("guests", g > 10 ? "Ten guests is the boat's limit." : "How many guests, 1 to 10?"); ok = false;
+    } else setError("guests", "");
+
+    if (!date) {
+      setError("date", "Please pick a date."); ok = false;
+    } else if (date < iso) {
+      setError("date", "That date has already passed — please pick one ahead."); ok = false;
+    } else if (!inSeason(date)) {
+      setError("date", "We charter May 1 through November 1 — please pick a date in season."); ok = false;
+    } else setError("date", "");
+
+    return ok;
+  }
+
+  // Clear a field's error as soon as it's edited
+  ["name", "email", "phone", "guests", "date"].forEach(function (id) {
+    document.getElementById("f-" + id).addEventListener("input", function () { setError(id, ""); });
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    errorBox.hidden = true;
+
+    if (!validate()) {
+      var firstInvalid = form.querySelector('[aria-invalid="true"]');
+      if (firstInvalid) firstInvalid.focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    var restLabel = submitBtn.textContent;
+    submitBtn.textContent = "Sending…";
+
+    var data = new FormData(form);
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json.success) {
+          fieldsWrap.hidden = true;
+          successCard.hidden = false;
+          successCard.focus();
+        } else {
+          throw new Error(json.message || "Submission failed");
+        }
+      })
+      .catch(function () {
+        errorBox.hidden = false;
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = restLabel;
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
