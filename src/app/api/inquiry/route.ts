@@ -150,15 +150,20 @@ export async function POST(request: Request) {
     });
     if (notify.error) throw new Error(notify.error.message);
 
-    // Guest confirmation is best-effort — don't fail the whole request if it bounces.
-    await resend.emails
-      .send({
-        from: FROM,
-        to: data.email,
-        subject: `We received your request — ${wordmark}`,
-        html: guestHtml,
-      })
-      .catch((e) => console.warn("[inquiry] guest confirmation failed:", e));
+    // Guest confirmation is best-effort. Resend only allows sending to
+    // arbitrary recipients once a domain is verified — so we only send the
+    // guest's auto-reply when a real INQUIRY_FROM (verified sender) is set.
+    // Until then, the business still receives every inquiry above.
+    if (process.env.INQUIRY_FROM) {
+      await resend.emails
+        .send({
+          from: FROM,
+          to: data.email,
+          subject: `We received your request — ${wordmark}`,
+          html: guestHtml,
+        })
+        .catch((e) => console.warn("[inquiry] guest confirmation failed:", e));
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {

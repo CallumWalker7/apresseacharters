@@ -32,7 +32,7 @@ export const content = {
   /** Contact + booking ------------------------------------------------- */
   contact: {
     // The inbox that receives inquiry-form submissions.
-    email: "info@apresseacharters.com",
+    email: "apresseacharters@gmail.com",
     // Your live domain (no https://). Used for SEO/canonical links.
     domain: "apresseacharters.com",
   },
@@ -78,10 +78,10 @@ export const content = {
       "Après Sea, a 31-foot Sea Ray SLX 310, running along the starboard side on calm water on Long Island Sound.",
     eyebrow: "Private Charters · Long Island Sound",
     // The big line. Keep it short.
-    tagline: "Private boat charters on Long Island Sound.",
+    tagline: "Private charters aboard Après Sea.",
     // A one-liner beneath the tagline.
     subline:
-      "A captained 31-foot Sea Ray out of Cos Cob, Connecticut. Up to ten guests, May through November. Every charter is planned and priced on its own.",
+      "A captained 31-foot Sea Ray for up to ten guests, out of Cos Cob, Connecticut. In season May through November, and every charter is planned and priced on its own.",
   },
 
   /** THE EXPERIENCE ---------------------------------------------------- */
