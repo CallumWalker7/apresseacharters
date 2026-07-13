@@ -64,7 +64,7 @@ export const content = {
   nav: [
     { label: "The Day", href: "#experience" },
     { label: "The Boat", href: "#boat" },
-    { label: "How It Works", href: "#availability" },
+    { label: "Book", href: "#availability" },
     { label: "Departure", href: "#location" },
   ],
   // The single call-to-action verb, reused everywhere.
@@ -128,8 +128,10 @@ export const content = {
       { label: "Power", value: "Twin sterndrive, up to 700 hp" },
       { label: "Model", value: "Sea Ray SLX 310" },
     ],
-    // Manufacturer walkthrough video (YouTube). Paste a new ID to change it.
-    videoId: "rbx8CWmjKy8",
+    // Manufacturer walkthrough video (YouTube).
+    // Leave empty ("") to hide the video block entirely. To bring it back,
+    // paste a YouTube video ID between the quotes, e.g. "rbx8CWmjKy8".
+    videoId: "",
     videoLabel: "The manufacturer's walkthrough of the SLX 310.",
     // Manufacturer reference page.
     manufacturerUrl: "https://www.searay.com/us/en/boats/slx/slx-310",
@@ -137,7 +139,7 @@ export const content = {
 
   /** AVAILABILITY & HOW IT WORKS --------------------------------------- */
   availability: {
-    eyebrow: "How It Works",
+    eyebrow: "Book",
     heading: "Every charter is quoted individually.",
     lede: "There's no published rate card. The date, the hours, the size of your group, and what you have in mind all shape the price, so we prepare a quote for each trip. We charter May 1 through November 1, weather permitting.",
     // The three quiet, confidence-building points.

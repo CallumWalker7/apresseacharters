@@ -1,7 +1,7 @@
 import { content } from "@content";
 import { Reveal } from "./Reveal";
 
-/** Availability & How It Works — calm, confidence-building, no icons. */
+/** Book — availability, quoting, and the three-step flow. */
 export function Availability() {
   const { availability } = content;
   return (

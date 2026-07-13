@@ -51,9 +51,9 @@ export function Boat() {
           ))}
         </div>
 
-        {/* Specs + video */}
+        {/* Specs (+ manufacturer video, shown only when a videoId is set in content.ts) */}
         <div className="mt-14 grid gap-12 md:grid-cols-12">
-          <Reveal className="md:col-span-5">
+          <Reveal className={boat.videoId ? "md:col-span-5" : "md:col-span-8 md:col-start-3"}>
             <dl className="divide-y divide-bone/15 border-t border-bone/15">
               {boat.specs.map((spec) => (
                 <div
@@ -83,19 +83,21 @@ export function Boat() {
             </p>
           </Reveal>
 
-          <Reveal className="md:col-span-6 md:col-start-7" delay={80}>
-            <div className="relative aspect-video overflow-hidden rounded-xl border border-bone/15 bg-black/40">
-              <iframe
-                className="absolute inset-0 h-full w-full"
-                src={`https://www.youtube-nocookie.com/embed/${boat.videoId}`}
-                title={boat.videoLabel}
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-            <p className="mt-3 text-sm text-bone/55">{boat.videoLabel}</p>
-          </Reveal>
+          {boat.videoId ? (
+            <Reveal className="md:col-span-6 md:col-start-7" delay={80}>
+              <div className="relative aspect-video overflow-hidden rounded-xl border border-bone/15 bg-black/40">
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src={`https://www.youtube-nocookie.com/embed/${boat.videoId}`}
+                  title={boat.videoLabel}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <p className="mt-3 text-sm text-bone/55">{boat.videoLabel}</p>
+            </Reveal>
+          ) : null}
         </div>
       </div>
     </section>
