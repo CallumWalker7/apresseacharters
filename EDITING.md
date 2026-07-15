@@ -9,6 +9,40 @@ background needed. You'll do everything in **one file** called `content.ts`.
 
 ---
 
+## The easy way: ask Claude
+
+You don't have to edit anything by hand. This project works with **Claude Code**
+(Anthropic's coding assistant — claude.com/claude-code). Open the project folder
+with Claude and describe the change in plain English:
+
+- *"Change the tagline to 'Summer, from the water.'"*
+- *"Here's a new photo of the bow — use it instead of the current one."*
+- *"Push the season start back to May 15."*
+- *"Add a question to the form asking about the occasion."*
+- *"Publish the changes."* ← this puts them on the live site (about a minute).
+
+Claude edits the right file, shows you the result before it's public, and
+publishes when you say so. Some ground rules that keep it working well:
+
+1. **Give it facts, not vibes.** Claude will happily write copy, but only you
+   know what's true about the boat and the business. Never let it invent
+   claims (food, crew, routes, safety credentials) — and keep the site's two
+   standing rules: **no pricing** and **nothing that isn't real**.
+2. **Every change is reversible.** The project uses git — a full history of
+   every version. If you don't like a change: *"undo that last change"* or
+   *"put it back the way it was yesterday."* You cannot permanently break the
+   site by asking for edits.
+3. **Never paste passwords or API keys into the chat.** Claude doesn't need
+   them for editing. The site's one secret (the email-sending key) lives in
+   Vercel's settings, not in these files.
+4. **Look before you publish.** Claude can show you the site locally first.
+   Check it reads right, then say publish.
+
+The rest of this guide explains what Claude is doing under the hood — useful
+if you ever want to make a change by hand.
+
+---
+
 ## Where the content lives
 
 Open the file named **`content.ts`** in the main project folder. Everything you
@@ -29,7 +63,7 @@ and click `content.ts` in the sidebar.
 2. Find the line under `hero:` that looks like:
 
    ```
-   tagline: "Your day on the Sound, exactly as you imagine it.",
+   tagline: "Private charters aboard Après Sea.",
    ```
 
 3. Change the words **inside the quotes**:
@@ -111,7 +145,7 @@ Find this near the top of `content.ts`:
 
 ```
 contact: {
-  email: "info@apresseacharters.com",
+  email: "apresseacharters@gmail.com",
 ```
 
 Change the address inside the quotes and save. That's the inbox that receives
@@ -131,8 +165,9 @@ All in `content.ts`:
 - **Marina / address:** the `location:` section.
 - **Boat spec bullets:** the `specs:` list under `boat:` — each is a
   `{ label: "...", value: "..." }` pair.
-- **The Sea Ray video:** `videoId:` under `boat:` — paste the YouTube video's ID
-  (the part after `watch?v=` in the URL).
+- **The boat video:** `videoId:` under `boat:` — currently empty (`""`), which
+  hides the video block. To show a video, paste a YouTube video's ID between
+  the quotes (the part after `watch?v=` in the URL).
 - **Duration options** in the form dropdown: the `durationOptions:` list under
   `form:`.
 
