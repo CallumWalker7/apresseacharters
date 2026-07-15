@@ -190,3 +190,4 @@ All in `content.ts`:
 2. Check you didn't accidentally delete a `"`, a `,` or a `}`.
 3. Still stuck? The site's previous version is always safe — nothing you type
    in `content.ts` can harm the live site until it's re-published.
+
