@@ -1,0 +1,27 @@
+# Vercel's free plan only auto-builds commits authored by the Vercel account
+# owner (CallumWalker7). This action covers everyone else — family
+# collaborators included — by pinging a Vercel Deploy Hook, which rebuilds
+# the site from main regardless of who wrote the commit.
+#
+# The hook URL lives in the repo secret VERCEL_DEPLOY_HOOK
+# (GitHub repo → Settings → Secrets and variables → Actions).
+# Regenerate it anytime in Vercel → Project → Settings → Git → Deploy Hooks.
+name: Deploy for collaborators
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger-vercel:
+    # Skip when the owner both pushed and authored the commit — Vercel's own
+    # Git integration already builds those. Run in every other case.
+    if: github.actor != 'CallumWalker7' || github.event.head_commit.author.username != 'CallumWalker7'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Vercel deploy hook
+        run: |
+          curl --fail -s -X POST "$DEPLOY_HOOK" > /dev/null
+          echo "Deploy triggered for ${GITHUB_SHA::7}"
+        env:
+          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
