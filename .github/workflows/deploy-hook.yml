@@ -1,11 +1,13 @@
-# Vercel's free plan only auto-builds commits authored by the Vercel account
-# owner (CallumWalker7). This action covers everyone else — family
-# collaborators included — by pinging a Vercel Deploy Hook, which rebuilds
-# the site from main regardless of who wrote the commit.
+# Vercel's free plan refuses to build commits authored by anyone who isn't
+# the Vercel account owner (CallumWalker7) — even via deploy hooks. So for
+# every other author (the family collaborators), this action deploys directly
+# with the Vercel CLI using an account token. Token-based deployments count
+# as the token's owner, so the commit-author check never applies.
 #
-# The hook URL lives in the repo secret VERCEL_DEPLOY_HOOK
-# (GitHub repo → Settings → Secrets and variables → Actions).
-# Regenerate it anytime in Vercel → Project → Settings → Git → Deploy Hooks.
+# Secrets (GitHub repo → Settings → Secrets and variables → Actions):
+#   VERCEL_TOKEN — created at vercel.com/account/settings/tokens.
+#     If kid pushes stop deploying some day, the token likely expired —
+#     create a new one there and update the secret.
 name: Deploy for collaborators
 
 on:
@@ -13,15 +15,19 @@ on:
     branches: [main]
 
 jobs:
-  trigger-vercel:
+  deploy:
     # Skip when the owner both pushed and authored the commit — Vercel's own
     # Git integration already builds those. Run in every other case.
     if: github.actor != 'CallumWalker7' || github.event.head_commit.author.username != 'CallumWalker7'
     runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: team_sNvDEvgKMohesUJsGOreInuc
+      VERCEL_PROJECT_ID: prj_I0xY8rNaVyTd6K9cWL0E9kb9ULS7
     steps:
-      - name: Ping Vercel deploy hook
+      - uses: actions/checkout@v4
+      - name: Deploy to Vercel (production)
         run: |
-          curl --fail -s -X POST "$DEPLOY_HOOK" > /dev/null
-          echo "Deploy triggered for ${GITHUB_SHA::7}"
+          npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
+          echo "Deployed ${GITHUB_SHA::7} to production"
         env:
-          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
