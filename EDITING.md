@@ -145,7 +145,7 @@ Find this near the top of `content.ts`:
 
 ```
 contact: {
-  email: "apresseacharters@gmail.com",
+  email: "apresseaboatcharters@gmail.com",
 ```
 
 Change the address inside the quotes and save. That's the inbox that receives

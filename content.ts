@@ -32,7 +32,7 @@ export const content = {
   /** Contact + booking ------------------------------------------------- */
   contact: {
     // The inbox that receives inquiry-form submissions.
-    email: "apresseacharters@gmail.com",
+    email: "apresseaboatcharters@gmail.com",
     // Your live domain (no https://). Used for SEO/canonical links.
     domain: "apresseacharters.com",
   },
