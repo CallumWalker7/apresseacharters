@@ -69,18 +69,6 @@ export function Boat() {
                 </div>
               ))}
             </dl>
-            <p className="mt-5 text-xs text-bone/45">
-              Specifications per{" "}
-              <a
-                href={boat.manufacturerUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline decoration-bone/30 underline-offset-2 hover:text-bone"
-              >
-                Sea Ray
-              </a>
-              .
-            </p>
           </Reveal>
 
           {boat.videoId ? (

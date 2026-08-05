@@ -120,14 +120,7 @@ export const content = {
     ],
     // Accurate spec highlights (source: searay.com SLX 310).
     // Update these only with figures you can verify.
-    specs: [
-      { label: "Length overall", value: "31 ft 6 in" },
-      { label: "Beam", value: "10 ft 2 in" },
-      { label: "Guests aboard", value: "Up to 10" },
-      { label: "Fuel capacity", value: "158 gal" },
-      { label: "Power", value: "Twin sterndrive, up to 700 hp" },
-      { label: "Model", value: "Sea Ray SLX 310" },
-    ],
+    specs: [],
     // Manufacturer walkthrough video (YouTube).
     // Leave empty ("") to hide the video block entirely. To bring it back,
     // paste a YouTube video ID between the quotes, e.g. "rbx8CWmjKy8".
