@@ -7,6 +7,12 @@ export function Boat() {
   const { boat } = content;
   const [lead, ...rest] = boat.gallery;
 
+  // Typed explicitly so clearing the spec list in content.ts stays valid —
+  // "remove the specs" is a supported edit, not a build error.
+  const specs: ReadonlyArray<{ label: string; value: string }> = boat.specs;
+  const hasSpecs = specs.length > 0;
+  const hasVideo = Boolean(boat.videoId);
+
   return (
     <section id="boat" className="bg-ink py-24 text-bone sm:py-32">
       <div className="section">
@@ -51,42 +57,52 @@ export function Boat() {
           ))}
         </div>
 
-        {/* Specs (+ manufacturer video, shown only when a videoId is set in content.ts) */}
-        <div className="mt-14 grid gap-12 md:grid-cols-12">
-          <Reveal className={boat.videoId ? "md:col-span-5" : "md:col-span-8 md:col-start-3"}>
-            <dl className="divide-y divide-bone/15 border-t border-bone/15">
-              {boat.specs.map((spec) => (
-                <div
-                  key={spec.label}
-                  className="flex items-baseline justify-between gap-6 py-3.5"
-                >
-                  <dt className="text-sm uppercase tracking-widelabel text-bone/55">
-                    {spec.label}
-                  </dt>
-                  <dd className="text-right font-display text-lg text-bone">
-                    {spec.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
+        {/* Specs and manufacturer video. Either can be emptied in content.ts —
+            clear `specs` or `videoId` and the block adjusts or disappears. */}
+        {(hasSpecs || hasVideo) && (
+          <div className="mt-14 grid gap-12 md:grid-cols-12">
+            {hasSpecs && (
+              <Reveal
+                className={hasVideo ? "md:col-span-5" : "md:col-span-8 md:col-start-3"}
+              >
+                <dl className="divide-y divide-bone/15 border-t border-bone/15">
+                  {specs.map((spec) => (
+                    <div
+                      key={spec.label}
+                      className="flex items-baseline justify-between gap-6 py-3.5"
+                    >
+                      <dt className="text-sm uppercase tracking-widelabel text-bone/55">
+                        {spec.label}
+                      </dt>
+                      <dd className="text-right font-display text-lg text-bone">
+                        {spec.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </Reveal>
+            )}
 
-          {boat.videoId ? (
-            <Reveal className="md:col-span-6 md:col-start-7" delay={80}>
-              <div className="relative aspect-video overflow-hidden rounded-xl border border-bone/15 bg-black/40">
-                <iframe
-                  className="absolute inset-0 h-full w-full"
-                  src={`https://www.youtube-nocookie.com/embed/${boat.videoId}`}
-                  title={boat.videoLabel}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
-              <p className="mt-3 text-sm text-bone/55">{boat.videoLabel}</p>
-            </Reveal>
-          ) : null}
-        </div>
+            {hasVideo && (
+              <Reveal
+                className={hasSpecs ? "md:col-span-6 md:col-start-7" : "md:col-span-8 md:col-start-3"}
+                delay={80}
+              >
+                <div className="relative aspect-video overflow-hidden rounded-xl border border-bone/15 bg-black/40">
+                  <iframe
+                    className="absolute inset-0 h-full w-full"
+                    src={`https://www.youtube-nocookie.com/embed/${boat.videoId}`}
+                    title={boat.videoLabel}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                <p className="mt-3 text-sm text-bone/55">{boat.videoLabel}</p>
+              </Reveal>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
