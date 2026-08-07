@@ -87,7 +87,7 @@ export const content = {
   /** THE EXPERIENCE ---------------------------------------------------- */
   experience: {
     eyebrow: "The Day",
-    heading: "Every charter is private and planned around you.",
+    heading: "Every charter is private and customized for you.",
     // One or two short paragraphs. Each string is its own paragraph.
     paragraphs: [
       "We don't sell set packages, and you never share the boat with another group. Tell us the occasion — a sunset cruise, a harbor tour, an afternoon at anchor — and we plan the trip around it.",
